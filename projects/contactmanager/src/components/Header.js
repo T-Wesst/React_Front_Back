@@ -8,4 +8,7 @@ const Header = props => {
     </div>
   );
 };
+Header.defaultProps = {
+  branding: "My App"
+};
 export default Header;
