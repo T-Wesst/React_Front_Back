@@ -4,10 +4,11 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <h4>John Doe</h4>
+        {/*class componets use this.props.<propName>*/}
+        <h4>{this.props.name}</h4>
         <ul>
-          <li>Email: jdoe@gmail.com</li>
-          <li>phone: 818-818-818</li>
+          <li>{this.props.email}</li>
+          <li>{this.props.phone}</li>
         </ul>
       </div>
     );

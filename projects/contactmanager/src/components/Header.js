@@ -1,8 +1,9 @@
 import React from "react";
-const Header = () => {
+const Header = props => {
   return (
     <div>
-      <h1>Contact Manager</h1>
+      {/*functional componets use props.<propName>*/}
+      <h1>{props.branding}</h1>
     </div>
   );
 };
