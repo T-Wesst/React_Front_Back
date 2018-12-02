@@ -5,7 +5,7 @@ const Header = props => {
   return (
     <div>
       {/*functional componets use props.<propName>*/}
-      <h1>{branding}</h1>
+      <h1 style={{ color: "red" }}>{branding}</h1>
     </div>
   );
 };
