@@ -5,7 +5,7 @@ const Header = props => {
   return (
     <div>
       {/*functional componets use props.<propName>*/}
-      <h1 style={headingStyle}>{branding}</h1>
+      <h1>{branding}</h1>
     </div>
   );
 };
@@ -15,7 +15,5 @@ Header.defaultProps = {
 Header.propTypes = {
   branding: PropTypes.string.isRequired
 };
-const headingStyle = {
-  color: "green"
-};
+
 export default Header;
