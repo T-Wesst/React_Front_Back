@@ -9,12 +9,18 @@ class App extends Component {
     return (
       <div className="App">
         <Header branding="Contact Manager" />
-        <Contact name="John Doe" email="jdoe@gmail.com" phone="818-818-8188" />
-        <Contact
-          name="Karren Smith"
-          email="karren@gmail.com"
-          phone="818-255-2121"
-        />
+        <div className="container">
+          <Contact
+            name="John Doe"
+            email="jdoe@gmail.com"
+            phone="818-818-8188"
+          />
+          <Contact
+            name="Karren Smith"
+            email="karren@gmail.com"
+            phone="818-255-2121"
+          />
+        </div>
       </div>
     );
   }
