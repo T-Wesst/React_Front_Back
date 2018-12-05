@@ -2,23 +2,29 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 class Contact extends Component {
   state = {
-    showContactInfo: true
-  };
-  onShowClick = e => {
-    this.setState({ showContactInfo: !this.state.showContactInfo });
+    showContactInfo: false
   };
   render() {
+    const { showContactInfo } = this.state;
     const { name, phone, email } = this.props.contact;
     return (
       <div className="card card-body mb-3">
         {/*class componets use this.props.<propName>*/}
         <h4>
-          {name} <i onClick={this.onShowClick} className="fas fa-sort-down" />
+          {name}
+          <i
+            onClick={() =>
+              this.setState({ showContactInfo: !this.state.showContactInfo })
+            }
+            className="fas fa-sort-down"
+          />
         </h4>
-        <ul className="list-group">
-          <li className="list-group-item">Email: {email}</li>
-          <li className="list-group-item">Phone: {phone}</li>
-        </ul>
+        {showContactInfo ? (
+          <ul className="list-group">
+            <li className="list-group-item">Email: {email}</li>
+            <li className="list-group-item">Phone: {phone}</li>
+          </ul>
+        ) : null}
       </div>
     );
   }
