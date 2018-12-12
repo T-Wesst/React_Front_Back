@@ -26,6 +26,7 @@ export class Provider extends Component {
   };
   render() {
     return (
+      // Provider holds entire state of application
       <Context.Provider value={this.state}>
         {this.props.children}
       </Context.Provider>
