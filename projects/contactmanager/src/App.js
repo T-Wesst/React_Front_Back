@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Contacts from "./components/contacts/Contacts";
-import Header from "./components/layout/Header";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Provider } from "./context";
+import React, { Component } from 'react';
+import Contacts from './components/contacts/Contacts';
+import Header from './components/layout/Header';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from './context';
 
 class App extends Component {
   render() {
