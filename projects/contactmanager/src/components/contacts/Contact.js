@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Consumer } from "../../context";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Consumer } from '../../context';
 class Contact extends Component {
   state = {
     showContactInfo: false
   };
   onDeleteClick = (id, dispatch) => {
-    dispatch({ type: "DELETE_CONTACT", payload: id });
+    dispatch({ type: 'DELETE_CONTACT', payload: id });
   };
   render() {
     const { showContactInfo } = this.state;
@@ -17,7 +17,7 @@ class Contact extends Component {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
-              {/*class componets use this.props.<propName>*/}
+              {/*class components use this.props.<propName>*/}
               <h4>
                 {name}
                 <i
@@ -27,11 +27,11 @@ class Contact extends Component {
                     })
                   }
                   className="fas fa-sort-down"
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                 />
                 <i
                   className="fas fa-times"
-                  style={{ cursor: "pointer", float: "right", color: "red" }}
+                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
               </h4>
