@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 const Context = React.createContext();
 const reducer = (state, action) => {
   switch (action.type) {
-    case "DELETE_CONTACT":
+    case 'DELETE_CONTACT':
       return {
         ...state,
         contacts: state.contacts.filter(
+          // payload is data sent with action
           contact => contact.id !== action.payload
         )
       };
@@ -20,21 +21,21 @@ export class Provider extends Component {
     contacts: [
       {
         id: 1,
-        name: "John Doe",
-        email: "jdoe@gmail.com",
-        phone: "818-818-8118"
+        name: 'John Doe',
+        email: 'jdoe@gmail.com',
+        phone: '818-818-8118'
       },
       {
         id: 2,
-        name: "Karen Smith",
-        email: "karen@gmail.com",
-        phone: "818-224-3234"
+        name: 'Karen Smith',
+        email: 'karen@gmail.com',
+        phone: '818-224-3234'
       },
       {
         id: 3,
-        name: "Mike Myers",
-        email: "mike@gmail.com",
-        phone: "818-211-1122"
+        name: 'Mike Myers',
+        email: 'mike@gmail.com',
+        phone: '818-211-1122'
       }
     ],
     dispatch: action => {
