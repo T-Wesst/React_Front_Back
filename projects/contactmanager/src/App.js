@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// BrowserRouter is a parent component that stores all routes
-// Route holds all of routes
-// Switch enables a default page such as not found
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contacts from './components/contacts/Contacts';
 import Header from './components/layout/Header';
@@ -10,6 +7,7 @@ import About from './components/pages/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from './context';
 import AddContact from './components/contacts/AddContact';
+import NotFound from './components/pages/NotFound';
 
 class App extends Component {
   render() {
@@ -23,6 +21,7 @@ class App extends Component {
                 <Route exact path="/" component={Contacts} />
                 <Route exact path="/contact/add" component={AddContact} />
                 <Route exact path="/about" component={About} />
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
